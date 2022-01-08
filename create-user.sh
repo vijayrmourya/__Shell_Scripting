@@ -23,3 +23,5 @@ echo "user created with name ${namee}"
 echo "add password for the user"
 sudo passwd ${name}
 awk -F: '{ print $1}' /etc/passwd
+echo "the created user is: "
+getent passwd | grep ${namee}
